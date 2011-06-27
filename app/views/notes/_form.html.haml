@@ -1,0 +1,29 @@
+%div.notes
+  = form_for(@note, :html => {:multipart => true}) do |f|
+    %fieldset
+      %ol
+        %li
+          = f.text_field :title, :autofocus => :autofocus
+        %li
+          = f.text_area :body, :size => "20x15"      
+      %ol#tags
+        %li
+          = link_to image_tag("folder.png", :border => 0), {}, {:id => "add-tag", :href => "#"}
+        - @note.tags.each_with_index do |t,i|
+          %li
+            = link_to t.name, tag_path(t)
+      %ol#urls
+        %li
+          = link_to image_tag("target.png", :border => 0), {}, {:id => "add-url", :href => "#"}
+        - @note.urls.each_with_index do |u,i|
+          %li
+            = link_to u.link, u.link, :target => '_blank'
+      %ol#files
+        %li
+          = link_to image_tag("books.png", :border => 0), {}, {:id => "add-file", :href => "#"}
+        - @note.assets.each_with_index do |a,i|
+          %li
+            = link_to a[:file], a.file.url
+      %ol
+        %li
+          = f.submit

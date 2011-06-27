@@ -1,0 +1,17 @@
+%div.notes
+  %div.title
+    = link_to @note.title, edit_note_path(@note)
+  %div.body
+    = @note.body.gsub("\n", "<br/>").html_safe
+  - if !@note.tags.empty?
+    %div.meta= "Tags"
+    - @note.tags.each do |tag|
+      %div.link= link_to tag.name, tag_path(tag)
+  - if !@note.urls.empty?  
+    %div.meta= "Urls"
+    - @note.urls.each do |url|
+      %div.link= link_to url.link, url.link, :target => '_blank'
+  - if !@note.assets.empty?
+    %div.meta= "Assets"
+    - @note.assets.each do |asset|
+      %div.link= link_to asset[:file], asset.file.url

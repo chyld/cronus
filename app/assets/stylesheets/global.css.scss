@@ -1,0 +1,49 @@
+@import "colors";
+@import "fonts";
+
+*
+{
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  border-width: 0px;
+  list-style-type: none;
+}
+
+html, body
+{
+  background-color: $color05;
+}
+
+.site
+{
+  margin-left: auto;
+  margin-right: auto;
+  width: 550px;
+  background-color: $color10;
+  border-left: 1px solid $color04;
+  border-right: 1px solid $color04;
+}
+
+.header
+{
+  background-color: $color08;
+  padding: 25px;
+  border-bottom: 1px solid $color04;
+  a{@include font04($color09, 45px, 47px, 10px, none)};
+}
+
+.navigation
+{
+}
+
+.content
+{
+  margin: 30px;
+}
+
+.footer
+{
+  padding: 5px;
+  margin-bottom: 50px;
+  background-color: $color04;
+}

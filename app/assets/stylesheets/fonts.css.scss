@@ -1,0 +1,61 @@
+// http://typekit.com
+
+@mixin font01($color, $size, $height, $spacing, $decoration)
+{
+  font-family: tamarillo,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: $size;
+  line-height: $height;
+  letter-spacing: $spacing;
+  text-decoration: $decoration;
+  color: $color;
+}
+
+@mixin font02($color, $size, $height, $spacing, $decoration)
+{
+  font-family: myriad-pro,sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: $size;
+  line-height: $height;
+  letter-spacing: $spacing;
+  text-decoration: $decoration;
+  color: $color;
+}
+
+@mixin font03($color, $size, $height, $spacing, $decoration)
+{
+  font-family: trajan-pro,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: $size;
+  line-height: $height;
+  letter-spacing: $spacing;
+  text-decoration: $decoration;
+  color: $color;
+}
+
+@mixin font04($color, $size, $height, $spacing, $decoration)
+{
+  font-family: brioso-pro,sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: $size;
+  line-height: $height;
+  letter-spacing: $spacing;
+  text-decoration: $decoration;
+  color: $color;
+}
+
+@mixin font05($color, $size, $height, $spacing, $decoration)
+{
+  font-family: coquette,fantasy;
+  font-style: normal;
+  font-weight: 300;
+  font-size: $size;
+  line-height: $height;
+  letter-spacing: $spacing;
+  text-decoration: $decoration;
+  color: $color;
+}

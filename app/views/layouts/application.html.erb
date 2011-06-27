@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cronus</title>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application" %>
+  <script type="text/javascript" src="http://use.typekit.com/ito0kxc.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div class="site">
+    <div class="header"><%= render :partial => 'shared/header' %></div>
+    <div class="navigation"><%= render :partial => 'shared/navigation' %></div>
+    <div class="content"><%= yield %></div>
+    <div class="footer"><%= render :partial => 'shared/footer' %></div>
+  </div>
+</body>
+</html>

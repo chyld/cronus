@@ -1,0 +1,5 @@
+%div.tags
+  %div.taghead= link_to "tag: " + @tag.name, tags_path
+  - @tag.notes.each do |note|
+    %div.note
+      = link_to note.title, note_path(note)

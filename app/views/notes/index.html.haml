@@ -1,0 +1,5 @@
+%div.notes
+  %div.notehead= link_to "notes:", notes_path
+  - @notes.each do |note|
+    %div.note
+      = link_to note.title, note_path(note)
