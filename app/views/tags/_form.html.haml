@@ -1,0 +1,9 @@
+%div.tags
+  = form_for(@tag) do |f|
+    %fieldset
+      %ol
+        %li
+          = f.text_field :name, :autofocus => :autofocus
+      %ol.submit
+        %li
+          = f.submit

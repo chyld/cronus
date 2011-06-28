@@ -1,18 +1,11 @@
 @import "colors";
 @import "fonts";
+@import "styles";
 
 .tags
 {
-  .taghead
-  {
-    margin-bottom: 25px;
-    a{@include font03($color09, 21px, 23px, 1px, none)};
-  }
-
-  .tag, .note
-  {
-    margin-bottom: 20px;
-    border-bottom: 1px dashed $color04;
-    a{@include font05($color09, 15px, 17px, 1px, none)};
-  }
+  @include form;
+  @include head;
+  @include item;
+  @include nav;
 }

@@ -1,5 +1,5 @@
 %div.notes
-  %div.notehead= link_to "notes:", notes_path
+  %div.head= link_to "notes:", notes_path
   - @notes.each do |note|
-    %div.note
+    %div.item
       = link_to note.title, note_path(note)

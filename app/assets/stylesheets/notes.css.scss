@@ -1,40 +1,13 @@
 @import "colors";
 @import "fonts";
+@import "styles";
 
 .notes
 {
-  label
-  {
-    display: block;
-  }
-
-  li
-  {
-    padding-bottom: 5px;
-  }
-
-  input, textarea
-  {
-    padding: 1px;
-    width: 100%;
-    background-color: $color11;
-    border: 1px dashed $color03;
-    @include font02($color09, 15px, 25px, 0px, none);
-  }
-
-  input[type="submit"]
-  {
-    width: auto;
-    padding: 5px;
-    border: 3px double $color04;
-    background-color: $color08;
-    @include font05($color04, 17px, 25px, 1px, none);
-  }
-
-  a
-  {
-    @include font02($color03, 14px, 16px, 0px, none);
-  }
+  @include form;
+  @include head;
+  @include item;
+  @include nav;
 
   .title
   {
@@ -50,21 +23,8 @@
 
   .meta
   {
-    margin-top: 10px;
+    margin-top: 25px;
     margin-bottom: 5px;
-    @include font01($color11, 25px, 27px, 0px, none);
-  }
-
-  .notehead
-  {
-    margin-bottom: 25px;
-    a{@include font03($color09, 21px, 23px, 1px, none)};
-  }
-
-  .note
-  {
-    margin-bottom: 20px;
-    border-bottom: 1px dashed $color04;
-    a{@include font05($color09, 15px, 17px, 1px, none)};
+    @include font04($color04, 23px, 25px, 1px, none);
   }
 }

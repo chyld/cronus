@@ -1,0 +1,71 @@
+@import "colors";
+@import "fonts";
+
+@mixin form
+{
+  label
+  {
+    display: block;
+  }
+
+  li
+  {
+    padding-bottom: 5px;
+  }
+
+  input, textarea
+  {
+    padding: 1px;
+    width: 100%;
+    background-color: $color11;
+    border: 1px dashed $color03;
+    @include font02($color09, 15px, 25px, 0px, none);
+  }
+
+  input[type="submit"]
+  {
+    width: auto;
+    padding: 10px;
+    border: 1px solid $color04;
+    background-color: $color08;
+    @include font04($color04, 17px, 25px, 1px, none);
+  }
+
+  .submit
+  {
+    margin-top: 50px;
+  }
+
+  a
+  {
+    @include font02($color09, 14px, 16px, 0px, none);
+  }
+}
+
+@mixin head
+{
+  .head
+  {
+    margin-bottom: 25px;
+    a{@include font03($color09, 21px, 23px, 1px, none)};
+  }
+}
+
+@mixin item
+{
+  .item
+  {
+    margin-bottom: 20px;
+    border-bottom: 1px dashed $color04;
+    a{@include font05($color09, 15px, 17px, 1px, none)};  
+  }
+}
+
+@mixin nav
+{
+  .nav
+  {
+    margin-bottom: 10px;
+    a {padding-right: 35px;}
+  }
+}

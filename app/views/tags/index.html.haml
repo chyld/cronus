@@ -1,5 +1,5 @@
 %div.tags
-  %div.taghead= link_to "tags:", tags_path
+  %div.head= link_to "tags:", tags_path
   - @tags.each do |tag|
-    %div.tag
+    %div.item
       = link_to tag.name, tag_path(tag)

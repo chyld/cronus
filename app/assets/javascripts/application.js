@@ -10,8 +10,9 @@
 
 $(document).ready(function()
 {
-  $(document).bind('keydown', 'Ctrl+i', function() { $(window.location).attr('href', '/notes'); } );
-  $(document).bind('keydown', 'Ctrl+n', function() { $(window.location).attr('href', '/notes/new'); } );
+  $(document).bind('keydown', 'Ctrl+n', function() { $(window.location).attr('href', '/notes'); } );
+  $(document).bind('keydown', 'Ctrl+t', function() { $(window.location).attr('href', '/tags'); } );
+  $(document).bind('keydown', 'Ctrl+i', function() { $(window.location).attr('href', '/notes/new'); } );
 
   $('#add-tag').click(function(event)
   {
