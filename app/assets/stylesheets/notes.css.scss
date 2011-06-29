@@ -18,7 +18,7 @@
   .body
   {
     margin-bottom: 25px;
-    @include font02($color09, 15px, 25px, 0px, none);
+    @include font06($color09, 14px, 24px, 0px, none);
   }
 
   .meta

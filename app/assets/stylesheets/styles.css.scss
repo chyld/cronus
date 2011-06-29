@@ -19,7 +19,7 @@
     width: 100%;
     background-color: $color11;
     border: 1px dashed $color03;
-    @include font02($color09, 15px, 25px, 0px, none);
+    @include font06($color09, 14px, 24px, 0px, none);
   }
 
   input[type="submit"]
@@ -28,7 +28,7 @@
     padding: 10px;
     border: 1px solid $color04;
     background-color: $color08;
-    @include font04($color04, 17px, 25px, 1px, none);
+    @include font03($color04, 17px, 25px, 1px, none);
   }
 
   .submit
@@ -38,7 +38,7 @@
 
   a
   {
-    @include font02($color09, 14px, 16px, 0px, none);
+    @include font06($color09, 13px, 20px, 0px, none);
   }
 }
 
@@ -66,6 +66,6 @@
   .nav
   {
     margin-bottom: 10px;
-    a {padding-right: 35px;}
+    a {padding-right: 50px;}
   }
 }

@@ -59,3 +59,15 @@
   text-decoration: $decoration;
   color: $color;
 }
+
+@mixin font06($color, $size, $height, $spacing, $decoration)
+{
+  font-family: botanika-mono-web,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: $size;
+  line-height: $height;
+  letter-spacing: $spacing;
+  text-decoration: $decoration;
+  color: $color;
+}
