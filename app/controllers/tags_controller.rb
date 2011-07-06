@@ -7,13 +7,22 @@ class TagsController < ApplicationController
   end
 
   def show
-    @tag = Tag.find(params[:id])
+    if params[:id] != "0"
+      @tag = Tag.find(params[:id])
+    else
+      @tag = Tag.new
+      @tag.notes = Tag.missing_notes
+    end
     respond_with @tag
   end
 
   def edit
-    @tag = Tag.find(params[:id])
-    respond_with @tag
+    if params[:id] == "0"
+      redirect_to :action => :show
+    else
+      @tag = Tag.find(params[:id])
+      respond_with @tag
+    end
   end
 
   def update

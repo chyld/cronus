@@ -1,5 +1,6 @@
 %div.tags
   %div.nav
+    - @tag.id, @tag.name = 0, "∅" if @tag.id.nil?
     = link_to image_tag("arrow_left.png", :border => 0), tag_path(@tag.prev)
     = link_to image_tag("arrow_right.png", :border => 0), tag_path(@tag.next)
   %div.head= link_to @tag.name, edit_tag_path(@tag)

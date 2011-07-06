@@ -18,13 +18,23 @@
   .body
   {
     margin-bottom: 25px;
-    @include font06($color09, 14px, 24px, 0px, none);
+    @include font07($color09, 12px, 1.4em, 0px, none);
   }
 
   .meta
   {
+    clear: both;
     margin-top: 25px;
     margin-bottom: 5px;
     @include font04($color04, 23px, 25px, 1px, none);
+  }
+
+  .image
+  {
+    float: left;
+    padding: 10px;
+    margin: 10px;
+    background-color: $color05;
+    border: 1px solid $color01;
   }
 }

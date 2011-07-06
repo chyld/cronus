@@ -1,5 +1,7 @@
 %div.tags
   %div.head= link_to "tags:", tags_path
+  %div.item
+    = link_to "∅" + " :: #{Tag.missing_notes.count}", tag_path(0)
   - @tags.each do |tag|
     %div.item
-      = link_to tag.name, tag_path(tag)
+      = link_to tag.name + " :: #{tag.notes.count}", tag_path(tag)

@@ -71,3 +71,15 @@
   text-decoration: $decoration;
   color: $color;
 }
+
+@mixin font07($color, $size, $height, $spacing, $decoration)
+{
+  font-family: Monaco,Courier,"DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
+  font-style: normal;
+  font-weight: normal;
+  font-size: $size;
+  line-height: $height;
+  letter-spacing: $spacing;
+  text-decoration: $decoration;
+  color: $color;
+}

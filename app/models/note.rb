@@ -10,4 +10,6 @@ class Note < ActiveRecord::Base
   def next
     Note.where("id > #{id}").order("id ASC").first
   end
+
+  default_scope :order => 'id ASC'
 end

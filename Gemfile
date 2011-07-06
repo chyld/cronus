@@ -11,6 +11,7 @@ gem 'uglifier'
 gem 'jquery-rails'
 gem 'haml'
 gem 'carrierwave'
+gem 'rmagick'
 
 # To use debugger
 gem 'ruby-debug19', :require => 'ruby-debug'

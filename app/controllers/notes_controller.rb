@@ -35,6 +35,12 @@ class NotesController < ApplicationController
     respond_with @note
   end
 
+  def image
+    img = Magick::Image.read("#{Rails.root.to_path}/public#{params[:file]}").first
+    img = img.resize_to_fill(150, 150)
+    send_data img.to_blob, :type => "image/jpeg", :disposition => "inline"
+  end
+
   private
   def update_note_attributes
     @note.title = params[:note][:title]
