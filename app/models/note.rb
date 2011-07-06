@@ -4,11 +4,11 @@ class Note < ActiveRecord::Base
   has_and_belongs_to_many :tags
 
   def prev
-    Note.where("id < #{id}").order("id DESC").first
+    Note.where("id < #{id}").last
   end
 
   def next
-    Note.where("id > #{id}").order("id ASC").first
+    Note.where("id > #{id}").first
   end
 
   default_scope :order => 'id ASC'

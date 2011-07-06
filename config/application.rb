@@ -40,3 +40,5 @@ module Cronus
     config.assets.enabled = true
   end
 end
+
+autoload :Magick, 'RMagick'
