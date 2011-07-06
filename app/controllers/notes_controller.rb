@@ -1,3 +1,5 @@
+require 'RMagick'
+
 class NotesController < ApplicationController
   respond_to :html
 
