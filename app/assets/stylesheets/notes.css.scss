@@ -11,8 +11,14 @@
 
   .title
   {
-    margin-bottom: 25px;
+    margin-bottom: 5px;
     a{@include font03($color09, 21px, 23px, 1px, none)};
+  }
+
+  .date
+  {
+    @include font06($color09, 10px, 1.4em, 0px, none);
+    margin-bottom: 25px;
   }
 
   .body

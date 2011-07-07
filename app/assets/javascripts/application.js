@@ -10,6 +10,8 @@
 
 $(document).ready(function()
 {
+  $('.visible').hide();
+
   $(document).bind('keydown', 'Ctrl+n', function() { $(window.location).attr('href', '/notes'); } );
   $(document).bind('keydown', 'Ctrl+t', function() { $(window.location).attr('href', '/tags'); } );
   $(document).bind('keydown', 'Ctrl+i', function() { $(window.location).attr('href', '/notes/new'); } );
@@ -36,5 +38,10 @@ $(document).ready(function()
 
     $("#files").append('<li class="half"><input id="attachment_name' + file_count  + '" name="attachment[name' + file_count + ']" type="file" /></li>');
     file_count++;
+  });
+
+  $('#add-dates').click(function(event)
+  {
+	$('.visible').toggle();
   });
 });

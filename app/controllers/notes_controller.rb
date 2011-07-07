@@ -35,6 +35,14 @@ class NotesController < ApplicationController
     respond_with @note
   end
 
+  def tag
+    @note = Note.find(params[:note_id])
+    tag = Tag.find(params[:tag])
+    @note.tags.delete(tag)
+    tag.delete if tag.notes.empty?
+    respond_with @note
+  end
+
   def image
     img = Magick::Image.read("#{Rails.root.to_path}/public#{params[:file]}").first
     img = img.resize_to_fill(150, 150)
@@ -45,6 +53,8 @@ class NotesController < ApplicationController
   def update_note_attributes
     @note.title = params[:note][:title]
     @note.body = params[:note][:body]
+    @note.begin_date = params[:note][:begin_date]
+    @note.end_date = params[:note][:end_date]
 
     tags = []
     params[:tag].each_pair do |k,v|

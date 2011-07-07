@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110625015230) do
+ActiveRecord::Schema.define(:version => 20110707191050) do
 
   create_table "assets", :force => true do |t|
     t.text     "file"
@@ -26,6 +26,8 @@ ActiveRecord::Schema.define(:version => 20110625015230) do
     t.text     "body"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.datetime "begin_date"
+    t.datetime "end_date"
   end
 
   create_table "notes_tags", :id => false, :force => true do |t|

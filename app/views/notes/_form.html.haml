@@ -24,6 +24,12 @@
         - @note.assets.each_with_index do |a,i|
           %li
             = link_to a[:file], a.file.url
+      %ol#dates
+        %li
+          = link_to image_tag("calendar_1.png", :border => 0), {}, {:id => "add-dates", :href => "#"}
+        %li.visible.small
+          = f.text_field :begin_date
+          = f.text_field :end_date
       %ol.submit
         %li
           = f.submit

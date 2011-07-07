@@ -4,12 +4,16 @@
     = link_to image_tag("arrow_right.png", :border => 0), note_path(@note.next)
   %div.title
     = link_to @note.title, edit_note_path(@note)
+  %div.date
+    = "#{@note.begin_date.strftime("%A, %B %m, %Y") unless @note.begin_date.nil?} #{@note.end_date.strftime(":: %A, %B %m, %Y") unless @note.end_date.nil?}"
   %div.body
     = @note.body.gsub("\n", "<br/>").html_safe
   - if !@note.tags.empty?
     %div.meta= "Tags"
     - @note.tags.each do |tag|
-      %div.link= link_to tag.name, tag_path(tag)
+      %div.link
+        = link_to image_tag("x-red.gif", :border => 0), "#{note_tag_path(@note)}?tag=#{tag.id}", :method => :delete, :confirm => "Are you sure?"
+        = link_to tag.name, tag_path(tag)
   - if !@note.urls.empty?  
     %div.meta= "Urls"
     - @note.urls.each do |url|
