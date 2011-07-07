@@ -3,6 +3,7 @@
     - @tag.id, @tag.name = 0, "∅" if @tag.id.nil?
     = link_to image_tag("arrow_left.png", :border => 0), tag_path(@tag.prev)
     = link_to image_tag("arrow_right.png", :border => 0), tag_path(@tag.next)
+    = link_to image_tag("picture.png", :border => 0), slideshow_path(@tag)
   %div.head= link_to @tag.name, edit_tag_path(@tag)
   - @tag.notes.each do |note|
     %div.item

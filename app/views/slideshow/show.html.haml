@@ -1,0 +1,8 @@
+%div.slideshow
+  %div.title= link_to @tag.name, "#"
+  - @tag.notes.each do |note|
+    - note.assets.each do |asset|
+      - if asset.file.url.match('(gif|png|jp[e]*g)$')
+        %div.image
+          = link_to image_tag("#{note_image_path(note)}?file=#{asset.file.url}", :border => 0), asset.file.url, :target => '_blank'
+  %div.end

@@ -20,8 +20,8 @@
     - @note.assets.each do |asset|
       - if asset.file.url.match('(gif|png|jp[e]*g)$')
         %div.image
-          %img{:src =>  "#{note_image_path(@note)}?file=#{asset.file.url}"}
+          = link_to image_tag("#{note_image_path(@note)}?file=#{asset.file.url}", :border => 0), asset.file.url, :target => '_blank'
   - if !@note.assets.empty?
     %div.meta= "Files"
     - @note.assets.each do |asset|
-      %div.link= link_to asset[:file], asset.file.url
+      %div.link= link_to asset[:file], asset.file.url, :target => '_blank'

@@ -1,0 +1,31 @@
+@import "colors";
+@import "fonts";
+@import "styles";
+
+.slideshow
+{
+  @include form;
+  @include head;
+  @include item;
+  @include nav;
+
+  .title
+  {
+    margin-bottom: 25px;
+    a{@include font03($color09, 21px, 23px, 1px, none)};
+  }
+
+  .image
+  {
+    float: left;
+    padding: 10px;
+    margin: 10px;
+    background-color: $color05;
+    border: 1px solid $color01;
+  }
+
+  .end
+  {
+    clear: both;
+  }
+}
