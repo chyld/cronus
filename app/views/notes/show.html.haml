@@ -5,7 +5,7 @@
   %div.title
     = link_to @note.title, edit_note_path(@note)
   %div.date
-    = "#{@note.begin_date.strftime("%A, %B %m, %Y") unless @note.begin_date.nil?} #{@note.end_date.strftime(":: %A, %B %m, %Y") unless @note.end_date.nil?}"
+    = "#{@note.begin_date.strftime("%A, %B %d, %Y") unless @note.begin_date.nil?} #{@note.end_date.strftime(":: %A, %B %d, %Y") unless @note.end_date.nil?}"
   %div.body
     = @note.body.gsub("\n", "<br/>").html_safe
   - if !@note.tags.empty?
