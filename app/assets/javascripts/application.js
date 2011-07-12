@@ -19,6 +19,13 @@ function createMap(id, name, lat, lng)
   };
 
   var map = new google.maps.Map(document.getElementById(id), myOptions);
+
+  var marker = new google.maps.Marker(
+  {
+    position: latlng,
+    map: map,
+    title: name
+  });
 }
 
 $(document).ready(function()
