@@ -30,6 +30,14 @@
         %li.visible.small
           = f.text_field :begin_date
           = f.text_field :end_date
+      %ol#locations
+        %li
+          = link_to image_tag("marker.png", :border => 0), {}, {:id => "add-location", :href => "#"}
+        - @note.locations.each_with_index do |l,i|
+          %li.small
+            = text_field :location, "#{i}[name]", :value => l.name
+            = text_field :location, "#{i}[lat]", :value => l.latitude
+            = text_field :location, "#{i}[long]", :value => l.longitude
       %ol.submit
         %li
           = f.submit

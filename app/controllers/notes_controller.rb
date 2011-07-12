@@ -71,5 +71,14 @@ class NotesController < ApplicationController
     params[:attachment].each_pair do |k,v|
       @note.assets << Asset.new(:file => v)
     end unless params[:attachment].nil?
+
+    locations = []
+    params[:location].each_pair do |k,v|
+      name = v[:name].strip
+      lat = v[:lat].strip
+      long = v[:long].strip
+      locations << Location.new(:name => name, :latitude => lat, :longitude => long) unless name.empty?
+    end unless params[:location].nil?
+    @note.locations = locations
   end
 end

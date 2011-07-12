@@ -8,6 +8,19 @@
 //= require jquery_ujs
 //= require_tree .
 
+function createMap(id, name, lat, lng)
+{
+  var latlng = new google.maps.LatLng(lat, lng);
+  var myOptions = 
+  {
+    zoom: 8,
+    center: latlng,
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  };
+
+  var map = new google.maps.Map(document.getElementById(id), myOptions);
+}
+
 $(document).ready(function()
 {
   $('.visible').hide();
@@ -38,6 +51,17 @@ $(document).ready(function()
 
     $("#files").append('<li class="half"><input id="attachment_name' + file_count  + '" name="attachment[name' + file_count + ']" type="file" /></li>');
     file_count++;
+  });
+
+  $('#add-location').click(function(event)
+  {
+    var location_count = $("#locations > li").size() - 1;
+	var name = '<input id="location_name' + location_count  + '" name="location[' + location_count + '[name]]" size="30" type="text" /> ';
+	var latitude = '<input id="location_lat' + location_count  + '" name="location[' + location_count + '[lat]]" size="30" type="text" /> ';
+	var longitude = '<input id="location_long' + location_count  + '" name="location[' + location_count + '[long]]" size="30" type="text" /> ';
+
+    $("#locations").append('<li class="small">' + name + latitude + longitude + '</li>');
+    location_count++;
   });
 
   $('#add-dates').click(function(event)

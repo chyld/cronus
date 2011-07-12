@@ -25,6 +25,13 @@
       - if asset.file.url.match('(gif|png|jp[e]*g)$')
         %div.image
           = link_to image_tag("#{note_image_path(@note)}?file=#{asset.file.url}", :border => 0), asset.file.url, :target => '_blank'
+  - if !@note.locations.empty?
+    %div.meta= "Maps"
+    - @note.locations.each do |location|
+      %div{:id => "map_#{location.name}", :class => "map"}
+        :javascript
+          createMap("map_#{location.name}", "#{location.name}", "#{location.latitude}", "#{location.longitude}");
+    %div.end
   - if !@note.assets.empty?
     %div.meta= "Files"
     - @note.assets.each do |asset|

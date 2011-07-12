@@ -43,4 +43,18 @@
     background-color: $color05;
     border: 1px solid $color01;
   }
+
+  .map
+  {
+    width: 350px;
+    height: 350px;
+    float: left;
+    margin: 10px;
+    border: 3px double $color04;
+  }
+
+  .end
+  {
+    clear: both;
+  }
 }
