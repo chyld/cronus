@@ -75,9 +75,10 @@ class NotesController < ApplicationController
     locations = []
     params[:location].each_pair do |k,v|
       name = v[:name].strip
+      desc = v[:desc].strip
       lat = v[:lat].strip
       long = v[:long].strip
-      locations << Location.new(:name => name, :latitude => lat, :longitude => long) unless name.empty?
+      locations << Location.new(:name => name, :description => desc, :latitude => lat, :longitude => long) unless name.empty?
     end unless params[:location].nil?
     @note.locations = locations
   end

@@ -31,6 +31,7 @@
       %div{:id => "map_#{location.name}", :class => "map"}
         :javascript
           createMap("map_#{location.name}", "#{location.name}", "#{location.latitude}", "#{location.longitude}");
+      %div.legend= location.description
     %div.end
   - if !@note.assets.empty?
     %div.meta= "Files"

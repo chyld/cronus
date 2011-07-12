@@ -38,6 +38,8 @@
             = text_field :location, "#{i}[name]", :value => l.name
             = text_field :location, "#{i}[lat]", :value => l.latitude
             = text_field :location, "#{i}[long]", :value => l.longitude
+          %li
+            = text_area :location, "#{i}[desc]", :value => l.description, :size => "20x5"
       %ol.submit
         %li
           = f.submit

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110711155702) do
+ActiveRecord::Schema.define(:version => 20110712180550) do
 
   create_table "assets", :force => true do |t|
     t.text     "file"
@@ -25,9 +25,10 @@ ActiveRecord::Schema.define(:version => 20110711155702) do
     t.text     "name"
     t.float    "latitude"
     t.float    "longitude"
-    t.integer  "note_id",    :limit => 8
+    t.integer  "note_id",     :limit => 8
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "description"
   end
 
   add_index "locations", ["note_id"], :name => "note_location_ix"

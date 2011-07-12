@@ -64,10 +64,12 @@ $(document).ready(function()
   {
     var location_count = $("#locations > li").size() - 1;
     var name = '<input id="location_name' + location_count  + '" name="location[' + location_count + '[name]]" size="30" type="text" /> ';
+    var desc = '<textarea id="location_desc' + location_count  + '" name="location[' + location_count + '[desc]]" rows="5" /> ';
     var latitude = '<input id="location_lat' + location_count  + '" name="location[' + location_count + '[lat]]" size="30" type="text" /> ';
     var longitude = '<input id="location_long' + location_count  + '" name="location[' + location_count + '[long]]" size="30" type="text" /> ';
 
     $("#locations").append('<li class="small">' + name + latitude + longitude + '</li>');
+    $("#locations").append('<li>' + desc + '</li>');
     location_count++;
   });
 

@@ -49,8 +49,22 @@
     width: 350px;
     height: 350px;
     float: left;
+    clear: left;
     margin: 10px;
     border: 3px double $color04;
+  }
+
+  .legend
+  {
+    overflow: auto;
+    float: left;
+    width: 350px;
+    height: 330px;
+    margin: 10px;
+    padding: 10px;
+    background-color: $color08;
+    border: 3px double $color04;
+    @include font07($color11, 12px, 1.4em, 0px, none);
   }
 
   .end
