@@ -11,9 +11,9 @@
 function createMap(id, name, lat, lng)
 {
   var latlng = new google.maps.LatLng(lat, lng);
-  var myOptions = 
+  var myOptions =
   {
-    zoom: 8,
+    zoom: 15,
     center: latlng,
     mapTypeId: google.maps.MapTypeId.ROADMAP
   };
@@ -56,9 +56,9 @@ $(document).ready(function()
   $('#add-location').click(function(event)
   {
     var location_count = $("#locations > li").size() - 1;
-	var name = '<input id="location_name' + location_count  + '" name="location[' + location_count + '[name]]" size="30" type="text" /> ';
-	var latitude = '<input id="location_lat' + location_count  + '" name="location[' + location_count + '[lat]]" size="30" type="text" /> ';
-	var longitude = '<input id="location_long' + location_count  + '" name="location[' + location_count + '[long]]" size="30" type="text" /> ';
+    var name = '<input id="location_name' + location_count  + '" name="location[' + location_count + '[name]]" size="30" type="text" /> ';
+    var latitude = '<input id="location_lat' + location_count  + '" name="location[' + location_count + '[lat]]" size="30" type="text" /> ';
+    var longitude = '<input id="location_long' + location_count  + '" name="location[' + location_count + '[long]]" size="30" type="text" /> ';
 
     $("#locations").append('<li class="small">' + name + latitude + longitude + '</li>');
     location_count++;
@@ -66,6 +66,6 @@ $(document).ready(function()
 
   $('#add-dates').click(function(event)
   {
-	$('.visible').toggle();
+    $('.visible').toggle();
   });
 });
