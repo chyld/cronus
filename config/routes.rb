@@ -5,5 +5,8 @@ Cronus::Application.routes.draw do
     get 'image'
     delete 'tag'
   end
+
+  match "/backup/" => "backup#all"
+
   root :to => "notes#index"
 end
