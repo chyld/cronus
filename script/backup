@@ -1,3 +1,11 @@
 #!/bin/bash
 
-echo "my.tar"
+day=$(date +%Y%m%d.%H%M%S)
+file1="$day.sql"
+file2="$day.tgz"
+
+cd backup
+sudo -S -u postgres /opt/postgres/9.0/bin/pg_dump cronus_production > $file1
+tar -cvf $file2 $file1 ../public/files >/dev/null 2>&1
+echo $file2
+
